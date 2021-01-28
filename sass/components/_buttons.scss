@@ -1,0 +1,55 @@
+.btn {
+
+    &,
+    &:link,
+    &:visited {
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        position: relative;
+        transition: all .4s;
+        font-size: 1.5rem;
+        display: inline-block;
+        margin: 2rem 1rem;
+        cursor: pointer;
+    }
+
+    &:hover,
+    &:focus {}
+
+}
+
+.btn--white {
+    background-color: $color-white-dark;
+    border-radius: .5rem;
+    border: 2px solid transparent;
+    color: $color-black;
+    animation: moveFromBottom .8s ease-in;
+    animation-delay: .2s;
+    font-weight: 700;
+
+    &:hover,
+    &:focus {
+        background-color: transparent;
+        border: 2px solid $color-white;
+        color: $color-white-light;
+    }
+}
+
+
+.btn--green {
+    border-radius: 3rem;
+    background-color: $color-green;
+    color: $color-white-light;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    left: 1%;
+    font-weight: 400;
+
+    &:hover,
+    &:focus {
+        color: $color-white-light;
+        background-color: lighten($color-green, 4%);
+    }
+}

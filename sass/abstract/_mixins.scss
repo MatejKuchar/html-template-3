@@ -1,0 +1,87 @@
+@mixin clearfix {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+
+    & {
+        zoom: 1;
+        /* For IE 6/7 (trigger hasLayout) */
+    }
+}
+
+@mixin borderGray {
+    border-bottom: 0.1rem solid #939da5;
+}
+
+@mixin absoluteCenter {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin box-shadow-light {
+    box-shadow: 0 .2rem .2rem rgba(0, 0, 0, .2);
+}
+
+
+/*
+BREAKPOINT SIZES (BOOTSTRAP)
+
+EXTRA SMALL - <576 PX
+SMALL         >=576 PX
+MEDIUM        >=768 PX
+LARGE         >= 992 PX
+EXTRA LARGE   >= 1200 PX
+
+*/
+
+// MEDIA QUERY MANAGER  
+@mixin respond($breakpoint) {
+    @if $breakpoint==phone {
+        @media(max-width: 36em) {
+            @content
+        }
+
+        ;
+    }
+
+    @if $breakpoint==tab-port {
+        @media(max-width: 48em) {
+            @content
+        }
+
+        ;
+    }
+
+    @if $breakpoint==tab-land {
+        @media(max-width: 62em) {
+            @content
+        }
+
+        ;
+    }
+
+    @if $breakpoint==big-desktop {
+        @media(max-width: 75em) {
+            @content
+        }
+
+        ;
+    }
+
+    @if $breakpoint==xl-desktop {
+        @media(min-width: 75em) {
+            @content
+        }
+
+        ;
+    }
+
+}

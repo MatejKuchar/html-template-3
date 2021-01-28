@@ -1,0 +1,479 @@
+.info {
+
+    @include respond(tab-land) {
+        border-bottom: $border-gray;
+    }
+
+    &__left {
+        @include clearfix;
+        height: 100vh;
+        background-image: url('https://images.unsplash.com/photo-1477696957384-3b1d731c4cff?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=27463acb8518d4e6819d6f4441c8e47f&auto=format&fit=crop&w=1350&q=80');
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__right {
+        @include clearfix;
+
+        height: 100vh;
+        background-color: $color-grey-dark;
+        color: $color-white-light;
+        position: relative;
+
+        @include respond(big-desktop) {
+            height: 100%;
+            padding: 10% 5%;
+        }
+    }
+
+    &__right .absolute-center {
+        width: 80%;
+    }
+
+}
+
+.feature {
+
+    @include respond(tab-land) {
+        border-bottom: $border-gray;
+    }
+
+    &__right {
+        @include clearfix;
+        height: 100vh;
+        background-image: linear-gradient(to right top, rgba($color-primary-light, .5), rgba($color-primary-dark, .5)), url('https://c.wallhere.com/photos/66/96/2048x1365_px_city_Evening_Futuristic_landscape_Lights_Morning_nature-793489.jpg!d');
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__left {
+        @include clearfix;
+        height: 100vh;
+        background-color: $color-grey-dark;
+        color: $color-white-light;
+        position: relative;
+
+        @include respond(big-desktop) {
+            height: 100%;
+            padding: 10% 5%;
+        }
+    }
+
+
+    &__left .absolute-center .heading--secondary {
+        width: 80%;
+        margin: 1rem auto;
+    }
+
+    &__left .absolute-center .paragraph--2 {
+        width: 80%;
+        margin: 1rem auto;
+    }
+}
+
+/* SWIPER IN FEATURE SECTION */
+.swiper-container {
+    width: 40vw;
+    height: auto;
+
+    @include respond(tab-land) {
+        width: 80% !important;
+    }
+
+    @include respond(big-desktop) {
+        width: 80% !important;
+    }
+}
+
+.swiper-slide {
+
+    @include respond(tab-land) {
+        width: 100% !important;
+    }
+
+    @include respond(big-desktop) {
+        width: 100% !important;
+    }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    filter: grayscale(1);
+    top: 95%;
+    background-size: 1.7rem 4rem;
+}
+
+.swiper-button-next {
+    left: 4rem;
+}
+
+.swiper-pagination {
+    right: 2rem !important;
+    top: 95%;
+}
+
+.swiper-pagination-bullet {
+    filter: grayscale(1);
+    padding: .5rem;
+    margin: .1rem;
+}
+
+/* END FEATURE SECTION */
+
+
+
+.about {
+
+    @include respond(tab-land) {
+        border-bottom: $border-gray;
+    }
+
+    &__left {
+        @include clearfix;
+
+        background-color: $color-grey-dark;
+        height: 100vh;
+
+        @include respond(tab-land) {
+            height: 100%;
+        }
+    }
+
+    &__right {
+        @include clearfix;
+        position: relative;
+        background-color: $color-grey-dark;
+        height: 100vh;
+
+        @include respond(big-desktop) {
+            height: 100%;
+            padding: 10% 5%;
+        }
+
+    }
+
+    &__right .absolute-center {
+        width: 80%;
+    }
+
+    &__container {
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__container:hover &__inner {
+        top: 70%;
+        left: 50%;
+        opacity: 1;
+        position: absolute;
+        z-index: 0;
+    }
+
+    &__container:hover &__inner-heading {
+        transform: scale(1.1);
+    }
+
+    &__container:hover &__inner-text {
+        transform: scale(1.1);
+    }
+
+    &__container:hover .img {
+        box-shadow: inset 0rem -2rem 140px black;
+        transform: scale(1.1);
+    }
+
+    &__image {
+        @include box-shadow-light;
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    &__image--1 {
+        position: relative;
+        width: 100%;
+        height: auto;
+        background-image: url('http://cdn.themehelite.com/themeforest/pure/img/member-1.jpg');
+        background-size: cover;
+        background-position: 50%;
+        @include box-shadow-light;
+
+    }
+
+    &__image--2 {
+        position: relative;
+        width: 100%;
+        height: auto;
+        background-image: url('http://cdn.themehelite.com/themeforest/pure/img/member-2.jpg');
+        background-size: cover;
+        background-position: 50%;
+        @include box-shadow-light;
+
+    }
+
+
+    &__image--2:after,
+    &__image--1:after {
+        content: "";
+        display: block;
+        padding-bottom: 100%;
+    }
+
+    &__social-icon {
+        backface-visibility: hidden;
+        list-style: none;
+        color: $color-white;
+        font-size: 2rem;
+        position: absolute;
+        top: 3%;
+        left: 6%;
+        display: block;
+        transition: all .2s ease-in;
+        opacity: 0;
+
+        &>li {
+            backface-visibility: hidden;
+            position: relative;
+            left: 0;
+            padding-top: .5rem;
+
+            &>a {
+                text-decoration: none;
+            }
+        }
+    }
+
+    &__image--1:hover &__social-icon {
+        left: 3%;
+        opacity: 1;
+    }
+
+    &__image--2:hover &__social-icon {
+        left: 3%;
+        opacity: 1;
+    }
+
+    &__inner {
+        backface-visibility: hidden;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        width: 80%;
+        height: 5rem;
+        transition: all .3s ease-in-out;
+
+        @include respond(tab-port) {
+            top: 70%;
+            left: 50%;
+            opacity: 1;
+        }
+
+        @include respond(tab-land) {
+            top: 70%;
+            left: 50%;
+            opacity: 1;
+        }
+
+        @include respond(big-desktop) {
+            top: 70%;
+            left: 50%;
+            opacity: 1;
+        }
+
+        &-heading {
+            text-transform: uppercase;
+            font-size: 2.2rem;
+            font-weight: 400;
+            color: $color-white-light;
+            display: block;
+            text-align: center;
+            margin: 1.5rem 1rem;
+            letter-spacing: .3rem;
+            transition: all .2s ease-out;
+
+            @media screen and (max-width: 1240px) {
+                font-size: 1.9rem;
+            }
+        }
+
+        &-text {
+            font-size: 1.5rem;
+            font-weight: 400;
+            letter-spacing: .1rem;
+            color: $color-white-light;
+            display: block;
+            padding: 1.5rem 0rem;
+            text-align: center;
+            transition: all .2s ease-out;
+
+            @include respond(tab-port) {
+                font-size: 1.2rem;
+            }
+        }
+
+    }
+
+    &__img {
+        height: 33.333vh;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+
+.img {
+    backface-visibility: hidden;
+    transition: all .3s ease;
+    width: 100%;
+    height: 33.3vh;
+    background-position: center;
+    object-fit: cover;
+
+}
+
+#gallery {
+    line-height: 0;
+}
+
+
+/* CONTACT */
+.contact {
+
+    @include respond(tab-land) {
+        border-bottom: $border-gray;
+    }
+
+    &__left {
+        @include clearfix;
+
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-color: $color-grey-dark;
+
+        @include respond(big-desktop) {
+            height: 100%;
+            padding: 10% 5%;
+        }
+    }
+
+    &__left .absolute-center {
+        width: 80%;
+    }
+
+    &__right {
+        @include clearfix;
+
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-color: $color-grey-dark;
+    }
+
+    input {
+        background-color: $color-input;
+        border-radius: 3px;
+        margin: 0rem;
+        display: inline-block;
+        float: left;
+        outline: medium none;
+        padding: 1.5rem 2rem;
+        font-size: 1.4rem;
+        line-height: 1.4;
+        height: auto;
+        width: 100%;
+        color: $color-white;
+        margin-bottom: 2rem;
+        transition: all .2s ease-in-out;
+        text-align: left;
+        border: none;
+        border-bottom: 3px solid transparent;
+
+        &:focus:valid {
+            outline: none;
+            border-bottom: 3px solid greenyellow;
+        }
+
+        &:focus:invalid {
+            outline: none;
+            border-bottom: 3px solid orangered;
+        }
+
+        &::-webkit-input-placeholder {
+            color: $color-paragraph;
+        }
+    }
+
+
+    textarea {
+        font-family: $open-sans;
+        background-color: $color-input;
+        border: none;
+        border-radius: .3rem;
+        box-shadow: inset 0rem 0rem 2rem rgba(0, 0, 0, 0.1);
+        outline: medium none;
+        padding: 1.5rem 2rem;
+        font-size: 1.4rem;
+        line-height: 1.4;
+        height: auto;
+        width: 100%;
+        color: $color-white;
+        margin: 0rem;
+        transition: all .2s ease-in-out;
+        text-align: left;
+
+        &::-webkit-input-placeholder {
+            color: $color-paragraph;
+        }
+    }
+
+    form {
+        width: 100%;
+        display: contents;
+    }
+
+    &__name {}
+
+    &__email {}
+
+    &__company {}
+
+    &__number {}
+}
+
+#fp-nav.right {
+
+    @include respond(tab-land) {
+        display: none;
+    }
+}
+
+
+.copyright {
+    color: $color-paragraph;
+    position: absolute;
+    top: 97%;
+    left: 5%;
+    font-size: 1.3rem;
+    display: inline-block;
+}
+
+
+// GOOGLE MAPS STYLE
+#map {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+// PHOTO SWIPE
+.pswp__caption__center {
+    text-align: center;
+}
+
+.navigation {
+    @include clearfix;
+    height: 9rem;
+}

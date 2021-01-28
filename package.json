@@ -1,0 +1,28 @@
+{
+  "name": "posledna",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+    "concat:css": "concat -o css/style.concat.css css/style.comp.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap-4-grid": "^2.4.0",
+    "fullpage.js": "^2.9.7",
+    "jquery": "^3.3.1",
+    "photoswipe": "^4.1.2",
+    "swiper": "^4.3.0"
+  },
+  "devDependencies": {
+    "concat": "^1.0.3",
+    "live-server": "^1.2.1",
+    "node-sass": "^4.11.0",
+    "postcss-cli": "^6.1.2"
+  },
+  "description": ""
+}

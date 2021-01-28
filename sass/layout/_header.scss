@@ -1,0 +1,54 @@
+.header {
+  @include clearfix;
+
+  height: 100vh;
+  /*95% viewport height*/
+  background-size: cover;
+  background-position: top;
+
+  &__container {
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__text-box {
+    width: 50vh;
+    backface-visibility: hidden;
+    /*fix boucy when element is animated*/
+    position: absolute;
+    @include absoluteCenter;
+    text-align: center;
+  }
+
+  &__scroll-indicator {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    bottom: 2rem;
+    width: 100%;
+    text-align: center;
+    display: block;
+    animation: bounce 3s infinite ease;
+
+    & > a > img {
+      transform: scale(0.5);
+    }
+  }
+
+  @keyframes bounce {
+    0%,
+    20%,
+    60%,
+    80%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-0.7rem);
+    }
+  }
+}
