@@ -440,7 +440,7 @@ small {
   position: absolute;
   z-index: 10;
   left: 0;
-  bottom: -10rem;
+  bottom: -4rem;
   width: 100%;
   text-align: center;
   display: block;
@@ -449,7 +449,7 @@ small {
 }
 
 .header__scroll-indicator a img {
-  transform: scale(0.2);
+  transform: scale(0.5);
 }
 
 @-webkit-keyframes bounce {
